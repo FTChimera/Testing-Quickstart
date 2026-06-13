@@ -7,6 +7,8 @@ appcompat = "1.7.1"
 material = "1.14.0"
 pedro = "2.1.2"
 ftc = "11.0.0"
+kotlin = "2.0.21"
+coreKtx = "1.12.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -18,10 +20,12 @@ pedroCore = { module = "com.pedropathing:core", version.ref = "pedro" }
 pedroFtc = { module = "com.pedropathing:ftc", version.ref = "pedro" }
 ftc-robot-core = { group = "org.firstinspires.ftc", name = "RobotCore", version.ref = "ftc" }
 ftc-hardware = { group = "org.firstinspires.ftc", name = "Hardware", version.ref = "ftc" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 
 [bundles]
 ftc = ["ftc-robot-core", "ftc-hardware", "pedroCore", "pedroFtc"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
