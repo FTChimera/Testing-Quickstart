@@ -7,6 +7,7 @@ appcompat = "1.7.1"
 material = "1.14.0"
 pedro = "2.1.2"
 ftc = "11.0.0"
+ivy-telemetry = "1.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -18,9 +19,31 @@ pedroCore = { module = "com.pedropathing:core", version.ref = "pedro" }
 pedroFtc = { module = "com.pedropathing:ftc", version.ref = "pedro" }
 ftc-robot-core = { group = "org.firstinspires.ftc", name = "RobotCore", version.ref = "ftc" }
 ftc-hardware = { group = "org.firstinspires.ftc", name = "Hardware", version.ref = "ftc" }
+ftc-vision = { group = "org.firstinspires.ftc", name = "Vision", version.ref = "ftc" }
+ftc-obj = { group = "org.firstinspires.ftc", name = "OnBotJava", version.ref = "ftc" }
+ftc-inspection = { group = "org.firstinspires.ftc", name = "Inspection", version.ref = "ftc" }
+ftc-ftcCommon = { group = "org.firstinspires.ftc", name = "FtcCommon", version.ref = "ftc" }
+ftc-blocks = { group = "org.firstinspires.ftc", name = "Blocks", version.ref = "ftc" }
+ftc-robotserver = { group = "org.firstinspires.ftc", name = "RobotServer", version.ref = "ftc" }
+pedroTelemetry = { module = "com.pedropathing:telemetry", version.ref = "ivy-telemetry" }
+pedroIvy = { module = "com.pedropathing:ivy", version.ref = "ivy-telemetry" }
+
 
 [bundles]
-ftc = ["ftc-robot-core", "ftc-hardware", "pedroCore", "pedroFtc"]
+ftc = [
+    "ftc-robot-core",
+    "ftc-hardware",
+    "pedroCore",
+    "pedroFtc",
+    "ftc-vision",
+    "ftc-obj",
+    "ftc-inspection",
+    "ftc-ftcCommon",
+    "ftc-blocks",
+    "ftc-robotserver",
+    "pedroTelemetry",
+    "pedroIvy"
+]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
