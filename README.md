@@ -98,21 +98,14 @@ The file is not a full robot implementation. Instead, it acts as a proof-of-setu
 
 ### Local unit tests
 
-#### `app/src/test/java/com/test/UnitTest.java`
-
-This is the base class for local unit test classes used by the custom test harness. It exposes a shared static list:
-
-- `testClasses`
-
-That list is used by `TestAll` to determine which unit test classes should be executed together.
-
 #### `app/src/test/java/com/test/TestAll.java`
 
 This is the custom local test runner for the repository.
 
+
 What it does:
 - defines `configuredClasses()`
-- registers test classes by assigning `UnitTest.testClasses`
+- registers test classes by assigning `testClasses` (testClasses is the list of local test classes that will be run when this runner is executed)
 - reflects over each configured class
 - finds methods annotated with `@Test`
 - constructs an instance of each class and invokes its test methods
@@ -184,7 +177,7 @@ Examples of what belongs there:
 - subsystem logic
 - motion/path utilities
 - calculation helpers
-- wrappers around FTC or Pedro Pathing behavior
+- wrappers around FTC, Panels or Pedro Pathing behavior
 
 ### 2. Add local unit tests in `test`
 

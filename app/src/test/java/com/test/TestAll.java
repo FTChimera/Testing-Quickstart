@@ -7,10 +7,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class TestAll {
+    public static List<Class<?>> testClasses = new java.util.ArrayList<>();
 
     /** Configure your classes here*/
     public static void configuredClasses() {
-        UnitTest.testClasses = List.of(
+        testClasses = List.of(
                 ExampleUnitTest.class
         );
 
@@ -19,7 +20,7 @@ public class TestAll {
 
     @Test public void testAll() {
         configuredClasses();
-        for (Class<? extends UnitTest> testClass : UnitTest.testClasses) {
+        for (Class<?> testClass : testClasses) {
             try {
                 Arrays.stream(testClass.getDeclaredMethods())
                         .filter(method -> method.isAnnotationPresent(Test.class))
