@@ -9,6 +9,7 @@ pedro = "2.1.2"
 ftc = "11.0.0"
 kotlin = "2.0.21"
 coreKtx = "1.12.0"
+fullPanels = "1.0.12"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -21,9 +22,10 @@ pedroFtc = { module = "com.pedropathing:ftc", version.ref = "pedro" }
 ftc-robot-core = { group = "org.firstinspires.ftc", name = "RobotCore", version.ref = "ftc" }
 ftc-hardware = { group = "org.firstinspires.ftc", name = "Hardware", version.ref = "ftc" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+bylazarFullPanels = { module = "com.bylazar:fullpanels", version.ref = "fullPanels" }
 
 [bundles]
-ftc = ["ftc-robot-core", "ftc-hardware", "pedroCore", "pedroFtc"]
+ftc = ["ftc-robot-core", "ftc-hardware", "pedroCore", "pedroFtc", "bylazarFullPanels"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

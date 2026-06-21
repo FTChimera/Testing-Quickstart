@@ -152,15 +152,11 @@ The app module declares:
 
 That bundle is defined in `gradle/libs.versions.toml` and groups the main robotics/pathing dependencies used by this project.
 
-The `ftc` bundle includes:
-- `org.firstinspires.ftc:RobotCore`
-- `org.firstinspires.ftc:Hardware`
-- `com.pedropathing:core`
-- `com.pedropathing:ftc`
 
 In other words, this repository uses:
 - the **FTC SDK**
 - **Pedro Pathing**
+- **Bylazar FullPanels**
 
 through the shared `libs.bundles.ftc` dependency bundle.
 
