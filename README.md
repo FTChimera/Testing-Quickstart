@@ -149,6 +149,7 @@ That bundle is defined in `gradle/libs.versions.toml` and groups the main roboti
 In other words, this repository uses:
 - the **FTC SDK**
 - **Pedro Pathing**
+- **Pedro Addons (ivy, telemetry for Pedro Tuning)**
 - **Bylazar FullPanels**
 
 through the shared `libs.bundles.ftc` dependency bundle.
@@ -215,7 +216,9 @@ Let Android Studio sync the project so the dependencies from `libs.bundles.ftc` 
 
 That bundle provides:
 - FTC SDK dependencies
+- Bylazar Full Panels dependencies
 - Pedro Pathing dependencies
+- Pedro Addons (ivy, telemetry for Pedro Tuning)
 
 ### 3. Add your robot-related classes
 
